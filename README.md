@@ -10,6 +10,15 @@ Docker Compose version 2 or higher
 <https://docs.docker.com/compose/install>
 
 
-# ... to be continued
+## Preparing for Pre-compiler
+To avoid issues with overloaded wifi, you can clone this repo and from the `kafka-workshop/part2` directory run the following command:
+`docker compose up -d`
+
+After that has completed run 
+`docker compose down`
+
+Now you will have all the bits downloaded that you will need for the exercises during the pre-compiler.
+
+**More info and solutions will be added to this repository before the event.**
 
 
