@@ -1,0 +1,11 @@
+{
+    "namespace": "io.confluent.developer.avro",
+    "type": "record",
+    "name": "Session",
+    "fields": [
+      {"name": "id", "type": "long"},
+      {"name": "title", "type": "string"},
+      {"name": "presenter", "type": "string"}
+    ]
+  }
+  

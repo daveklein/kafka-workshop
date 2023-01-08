@@ -1,0 +1,11 @@
+# Create test topic
+docker exec -t broker kafka-topics --create --topic test --bootstrap-server broker:9092
+
+# Console Consumer
+docker exec -it broker kafka-console-consumer --topic orders --bootstrap-server broker:9092
+
+#Console Producer
+docker exec -it broker kafka-console-producer --topic orders --bootstrap-server broker:9092
+
+# Create topic for Producer/Consumer apps
+docker exec -t broker kafka-topics --create --topic orders --partitions 6 --bootstrap-server broker:9092

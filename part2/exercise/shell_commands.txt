@@ -1,0 +1,8 @@
+# Consume data from rated-sessions topic
+docker exec -it schema-registry /usr/bin/kafka-avro-console-consumer --topic rated-sessions --bootstrap-server broker:9092 --from-beginning
+
+# Produce data to sessions topic
+docker exec -i schema-registry /usr/bin/kafka-avro-console-producer --topic sessions --bootstrap-server broker:9092 --property value.schema="$(< src/main/avro/session.avsc)"
+
+# Produce data to ratings topic
+docker exec -i schema-registry /usr/bin/kafka-avro-console-producer --topic ratings --bootstrap-server broker:9092 --property value.schema="$(< src/main/avro/rating.avsc)"
