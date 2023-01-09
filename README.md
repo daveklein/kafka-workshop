@@ -19,6 +19,6 @@ After that has completed run
 
 Now you will have all the bits downloaded that you will need for the exercises during the pre-compiler.
 
-**More info and solutions will be added to this repository before the event.**
+**More info may be added to this repository before the event.**
 
 

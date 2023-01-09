@@ -39,19 +39,14 @@ public class JoinStreamToTable {
         final SessionRatingJoiner joiner = new SessionRatingJoiner();
 
         //Create stream from sessions topic, assign a key and write to rekeyed-sessions topic
-        KStream<String, Session> sessionStream = builder.<String, Session>stream(sessionTopic)
-                .map((key, session) -> new KeyValue<>(String.valueOf(session.getId()), session));
-
-        sessionStream.to(rekeyedSessionTopic);
-
+        
         //Create a KTable from the rekeyed-sessions topic
 
-        //Create stream from sessions topic and assign a key
+        //Create stream from ratings topic and assign a key
         
         //Create ratedSession stream by performing a join on ratings and sessions
         //using the SessionRatingJoiner
-        KStream<String, RatedSession> ratedSession = ratings.join(sessions, joiner);
-
+        
         //Write the ratedSessions stream to the rated-sessions topic
 
         return builder.build();
